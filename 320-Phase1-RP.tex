@@ -1,0 +1,324 @@
+% Exact LaTeX recreation of the supplied Phase-1.pdf
+% Compile with pdfLaTeX. Place member pictures in the same folder if required.
+
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[a4paper,left=2.0cm,right=2.0cm,top=1.55cm,bottom=1.55cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+\usepackage{setspace}
+
+% -------------------------------------------------
+% COLOURS
+% -------------------------------------------------
+\definecolor{TitleBlue}{RGB}{61,103,154}
+
+% -------------------------------------------------
+% GENERAL SETTINGS
+% -------------------------------------------------
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\renewcommand{\arraystretch}{1.0}
+
+% The supplied document uses a clean sans-serif heading style
+% and italic serif-style explanatory text.
+\newcommand{\blueheading}[1]{%
+    {\sffamily\color{TitleBlue}\fontsize{15}{18}\selectfont #1}%
+}
+
+\newcommand{\bluebigheading}[1]{%
+    {\sffamily\bfseries\color{TitleBlue}\fontsize{16}{19}\selectfont #1}%
+}
+
+\newcommand{\instruction}[1]{%
+    {\itshape\fontsize{10.5}{12.5}\selectfont #1}%
+}
+
+\newcommand{\answerbox}[2][3.0cm]{%
+    \vspace{2pt}
+    \noindent
+    \fbox{%
+        \begin{minipage}[t][#1][t]{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+            \vspace{1mm}
+            \itshape #2
+        \end{minipage}
+    }
+}
+
+% -------------------------------------------------
+% HEADER / FOOTER
+% -------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\fancyhead[L]{%
+    \sffamily\bfseries\itshape\fontsize{10.5}{12}\selectfont
+     DSCPP-III-2026-T320
+}
+\fancyhead[R]{%
+    \sffamily\bfseries\fontsize{10.5}{12}\selectfont
+    PROJECT PROPOSAL
+}
+\fancyfoot[R]{%
+    \itshape\fontsize{10}{12}\selectfont
+    Page \thepage
+}
+\setlength{\headheight}{14pt}
+\setlength{\headsep}{23pt}
+\setlength{\footskip}{24pt}
+
+% -------------------------------------------------
+% PAGE 1
+% -------------------------------------------------
+\begin{document}
+
+\vspace*{4mm}
+
+\bluebigheading{PROJECT AND TEAM INFORMATION}
+
+\vspace{13mm}
+
+\blueheading{\textbf{Project Title}}
+
+\vspace{1mm}
+
+\answerbox[1.0cm]{ \textit{Rescue Food And Management System} }}
+
+\vspace{13mm}
+
+\blueheading{Student / Team Information}
+
+\vspace{2mm}
+
+% Team information table
+% Compact 4-member layout so all members remain on Page 1.
+\noindent
+\begin{tabularx}{\textwidth}{|>{\RaggedRight\arraybackslash}p{0.69\textwidth}|>{\RaggedRight\arraybackslash}X|}
+\hline
+\begin{minipage}[t]{\linewidth}
+\vspace{1.5mm}
+\textit{Team Name:}\\[-1mm]
+\textit{Team \#}
+\vspace{1.5mm}
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}
+\vspace{1.5mm}
+\textit{
+ResQbite
+}
+\vspace{1.5mm}
+\end{minipage}
+\\
+\hline
+\begin{minipage}[t][3.25cm][t]{\linewidth}
+\vspace{1.5mm}
+\textbf{Team member 1 (Team Lead)}\\[-1mm]
+\textit{(Singh, name: Akshat student ID: 2510380179 2510380179@geu.ac.in, picture):}
+\vspace{2.0cm}
+\end{minipage}
+&
+\begin{minipage}[t][3.25cm][t]{\linewidth}
+\vspace{1.5mm}
+\textit{Singh,Akshat  -- 2510380179}\\
+\textit{2510380179@geu.ac.in}
+
+\vspace{2mm}
+\includegraphics[width=3.0cm,height=1.5cm,keepaspectratio]{member1.png}
+\end{minipage}
+\\
+\hline
+\begin{minipage}[t][3.25cm][t]{\linewidth}
+\vspace{1.5mm}
+\textbf{Team member 2}\\[-1mm]
+\textit{(Raturi, Hardik: 2510380179: 2510380179@geu.ac.in, picture):}
+\vspace{2.0cm}
+\end{minipage}
+&
+\begin{minipage}[t][3.25cm][t]{\linewidth}
+\vspace{1.5mm}
+\textit{Raturi,Hardik -- 2510380119}\\
+\textit{2510380119@geu.ac.in}
+
+\vspace{2mm}
+\includegraphics[width=3.0cm,height=1.5cm,keepaspectratio]{member2.png}
+\end{minipage}
+\\
+\hline
+\begin{minipage}[t][3.25cm][t]{\linewidth}
+\vspace{1.5mm}
+\textbf{Team member 3}\\[-1mm]
+\textit{(Gupta, Aadi: 2510388268: 2510388268@geu.ac.in, picture):}
+\vspace{2.0cm}
+\end{minipage}
+&
+\begin{minipage}[t][3.25cm][t]{\linewidth}
+\vspace{1.5mm}
+\textit{Gupta,Aadi -- 2510388268}\\
+\textit{2510388268@geu.ac.in}
+
+\vspace{2mm}
+\includegraphics[width=3.0cm,height=1.5cm,keepaspectratio]{member3.png}
+\end{minipage}
+\\
+\hline
+
+
+
+\\
+
+\end{tabularx}
+
+\newpage
+
+% -------------------------------------------------
+% PAGE 2
+% -------------------------------------------------
+
+\bluebigheading{PROPOSAL DESCRIPTION (10 pts)}
+
+\vspace{12mm}
+
+\blueheading{Motivation (1 pt)}
+
+\vspace{1mm}
+
+
+\answerbox[6.0cm]{Food which could have been eaten gets thrown away every day by restaurants, hotels, events, supermarkets, and home, while many individuals and organizations have run out of food sources. The main reason for this issue is an inefficient system of donor food collection, tracking, matching and distributing. 
+
+\vspace{1mm}Food donorships are manual now, and this is why they are ineffective in tracking inventory, responding to requests quickly and accurately, and informing a person of an urgent request and finding the right recipient for food. 
+
+\vspace{1mm}Food Rescue is meant to solve the problem of food shortages as it connects food donators with people and organizations in need of food, such as non-profit organizations, shelters, and community service organizations. Donators will register food available for donation with its description, and recipients will make requests with the system. 
+
+\vspace{1mm}The aim of the system is to reduce food wasting and help people in need of it }
+
+\vspace{8mm}
+
+\blueheading{State of the Art / Current solution (1 pt)}
+
+\vspace{1mm}
+
+
+\answerbox[4.1cm]{
+
+At the moment, the excess food is managed mainly by making phone calls, using messaging apps, spreadsheets
+or personal communication between the donors and NGOs.
+\vspace{1mm}
+Some organizations use digital systems, however, the relevant information may be disparate and stored in different electronic formats.
+
+\vspace{1mm}This makes it much more complicated to track the donation of available food, its amount and expiry dates. As a result, the food donations are often delay, mis allocated or even lost entirely.
+
+\vspace{1mm}FoodRescuestreamlines the process by providing one system for managing donors, food inventory,recipients,requests, foodmatching,and deliveries
+}
+
+\vspace{7mm}
+
+\blueheading{Project Goals and Milestones (2 pts)}
+
+\vspace{1mm}
+
+
+\answerbox[8cm]{
+FoodRescue aims to reduce food waste generated by enabling the sharing of surplus food amongs t food donors and food recipients.The food inventory, requests, matching process and deliveries will be managed by the system using C++ , DSA andSQLite.The main objectives include signing up donors and recipients, maintaining surplus food and stock, prioritizing and matching requests, updating food information and deliveries,and applying DSAand Objectoriented concepts.The following milestones are expected in this project.The first step will be conducting Requirement Analysis which will identify the project’s scope and requirements. System design will
+followss where the system architecture and database design will be determined. 
+
+\vspace{1mm}TheSQLite data bases will then be implemented in database setup-activity.Food,request,matching
+
+and dlivery systems will thenbe developed in the backend development phase.The next step includes DSA Creation where the data structures and algorithms suitable for this application will be identified.
+
+\vspace{1mm}Then the frontend components of thisapplication will be integrated into the backend system infrontend integration activity. The final step will be testing and finalization, which will ensure that
+
+this application isready for use.The ultimate goal of this project is to developa prototype Food rescue application that can be further modified and used in practice. The application willfacilitate
+
+more organized and reliable redistribution of surplusfoods
+ }
+
+\vspace{30mm}
+
+\blueheading{Project Approach (3 pts)}
+
+\vspace{1mm}
+
+\instruction{}
+
+\answerbox[9.1cm]{
+
+\vspace{1mm}The proposed solution will be the FoodRescue Management System that will aid food donors and food beneficiaries like food banks, shelters, and NGOs to minimize There is food waste; the donors will sign up and give details about surplus food and the recipients will submit The application will arrange the food that is available and prioritize it before allocating the food.
+
+\vspace{1mm}Regarding need and food requests.The application will be the object-oriented application and will have Donors,Foods Items, Recipients, Requests, and Deliveries with the major part of the application to be t was developed using the backend language C++. We will use SQLite, a lightweight and easy-to-set-up database, to store the information about the
+donors, inventory of food and requests, and information about the food that is sent, and the C++ Operations will be carried out with the databases.
+
+\vspace{1mm}These concepts will be utilized as required: Priority Queue s will be used for urgent requests, Normal Queues will be used for normal requests and deliveries, Dynamics Records will be managed using Linked
+The list, and Cancel Operations, will be managed using stacks. 
+
+\vspace{1mm}The first version will be a console-based C++ Application developed in VSC or another A C++ IDE; the idea is to create a working prototype that illustrates C++ programming, object-oriented programming, and data structures and algorithms.
+and SQLite, and where necessary eventually offer a graphical or web interface.
+}
+
+\newpage
+
+% -------------------------------------------------
+% PAGE 3
+% -------------------------------------------------
+
+\blueheading{System Architecture (High Level Diagram)(2 pts)}
+
+\vspace{1mm}
+
+\answerbox[18.0cm]{
+\includegraphics[width=18.0cm,height=100cm,keepaspectratio]{architecture.png}
+}
+\newpage
+
+\blueheading{Project Outcome / Deliverables (1 pts)}
+
+\vspace{1mm}
+
+\answerbox[6cm]{
+\vspace{1mm}
+TheFoodRescueManagementSystemis going to present a method for the management of surplus food donations and linking them to the recipients (NGOs, shelter, food bank). The users, by using this system, will enter the data about the donors and recipients, add and manage food that is available, create requests for food, prioritize requests for food and match available with the needs of recipients.
+
+\vspace{1mm}The implementation  is going to be carried out using C++ programming language with the use of various data structures such as linked list, queue, priority queue, and stack with application of the principles of OOP. SQLite will be the solution for the storage of the records of all the donors, food, requests and deliveries results are automated allocation of food, progress updates on inventory in real time, requests based on priorities and tracking of deliveries which will be achieved thanks to the use of the system which is going to also provide assistance in the application of DSA and OOP.
+
+}
+
+\vspace{8mm}
+
+\blueheading{Assumptions}
+
+\vspace{3mm}
+
+
+\answerbox[3.5cm]{
+\vspace{1mm}
+The project is based on the assumption that the donors provide the right information about the type, quantity, condition and expiry of the food It also make the assumption that there are real foods needs of those who are registered and that the food you are providing is safe too eat Contact and location details will be needed from donors, recipients and delivery volunteers.The system assumes that basic delivery routes and transport are available.Food Safety deciesions will be made based on the data enter into the system and simple validation rules, not a live inspection or an tracking system
+}
+
+\vspace{12mm}
+
+\blueheading{References}
+
+\vspace{1mm}
+
+
+\answerbox[4cm]{1:DoVIR: The Virtualization of Food Donation Distribution-An online system that connect s surplus foods donors t o recipients and increasing the esffectiveness in distributing funds.
+
+\vspace{1mm}2:A Web Based Food Donation Distribution System for Effective Surplus Food Management-An
+online platform which provides surplus food donation management service by connecting therelevant
+surplus food to the respective recipients
+
+\vspace{1mm} 3:A Web Platform forFood Donation Distribution-A service created to reduce and minimize
+foods waste by connecting foods donors to various charity orgyanizations supplying their surplus food
+donation.}
+
+\end{document}
